@@ -1,0 +1,1449 @@
+/* ==============================================================
+   அருள்மிகு திருக்கோவில் இணையதளம் - பாணி தாள் (Style Sheet)
+   Devotional Temple Aesthetics with Sacred Maroon, Saffron & Gold
+   ============================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;500;600;700;800&family=Cinzel:wght@600;700;900&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-maroon: #680509;
+    --color-maroon-dark: #3f0306;
+    --color-maroon-light: #8e151b;
+    --color-gold: #e5a93b;
+    --color-gold-light: #ffd27d;
+    --color-gold-dark: #b87d19;
+    --color-saffron: #f77f00;
+    --color-saffron-light: #fff0db;
+    --color-bg: #fdfbf7;
+    --color-card-bg: #ffffff;
+    --color-text-main: #2b2b2b;
+    --color-text-muted: #595959;
+    --border-color: #ede4d3;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 8px 24px rgba(104, 5, 9, 0.08);
+    --shadow-lg: 0 16px 36px rgba(104, 5, 9, 0.14);
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --container-max: 1240px;
+    --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Mukta Malar', 'Noto Sans Tamil', 'Nirmala UI', 'Latha', 'Vijaya', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    line-height: 1.65;
+    font-size: 16px;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/dashboard_bg.jpg') center center / cover no-repeat;
+    opacity: 0.15; /* Balanced subtle divine watermark */
+    pointer-events: none;
+    z-index: -1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Mukta Malar', sans-serif;
+    color: var(--color-maroon-dark);
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* -------------------------------------------------------------
+   மேல் அறிவிப்புப் பட்டை (Top Announcement & Header)
+   ------------------------------------------------------------- */
+.top-notice-bar {
+    background: linear-gradient(90deg, #3f0306, #680509, #3f0306);
+    color: #ffecd2;
+    padding: 8px 0;
+    font-size: 0.88rem;
+    border-bottom: 2px solid var(--color-gold);
+}
+
+.notice-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.notice-badge {
+    background: var(--color-gold);
+    color: #3f0306;
+    font-weight: 700;
+    font-size: 0.78rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.notice-ticker {
+    flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.notice-text {
+    display: inline-block;
+    animation: tickerAnim 25s linear infinite;
+}
+
+@keyframes tickerAnim {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.top-contact-info {
+    display: flex;
+    gap: 18px;
+    white-space: nowrap;
+}
+
+.top-contact-info a:hover {
+    color: var(--color-gold);
+}
+
+/* மேல் அறிவிப்புப் பட்டை நீக்கம் (Removed Top Notice Bar) */
+.top-notice-bar {
+    display: none !important;
+}
+
+/* முதன்மை தலைப்பு & வழிசெலுத்தல் - நல்லூர் தேவஸ்தான பாணி (Nallur Style Header) */
+.nallur-header {
+    background: #ffffff;
+    border-bottom: 2px solid var(--color-gold);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    position: relative; /* உருளும்போது தானாக மறையும் (Scrolls away naturally) */
+    z-index: 1000;
+    width: 100%;
+}
+
+.nallur-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 20px;
+    max-width: 1360px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.nallur-nav-wing {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 4px;
+    flex: 1;
+}
+
+.nallur-nav-left {
+    justify-content: flex-end;
+    padding-right: 18px;
+}
+
+.nallur-nav-right {
+    justify-content: flex-start;
+    padding-left: 18px;
+}
+
+.nallur-nav-link {
+    font-size: 0.94rem;
+    font-weight: 700;
+    color: #3b2015;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    position: relative;
+    transition: all 0.22s ease;
+    white-space: nowrap;
+    letter-spacing: 0.2px;
+}
+
+.nallur-nav-link:hover {
+    color: var(--color-maroon);
+    background: #fdf5e8;
+}
+
+.nallur-nav-link.active {
+    color: var(--color-maroon);
+    font-weight: 800;
+}
+
+.nallur-nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 10px;
+    right: 10px;
+    height: 2.5px;
+    background: var(--color-gold);
+    border-radius: 2px;
+}
+
+/* மத்திய தேவஸ்தான இலச்சினை & பெயர் (Compact Center Brand) */
+.nallur-center-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    flex-shrink: 0;
+    padding: 2px 10px;
+    transition: transform 0.3s ease;
+}
+
+.nallur-center-brand:hover {
+    transform: translateY(-1px);
+}
+
+.nallur-brand-emblem {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--color-gold);
+    box-shadow: 0 2px 8px rgba(104, 5, 9, 0.2);
+    overflow: hidden;
+    background: #ffffff;
+    margin-bottom: 2px;
+}
+
+.nallur-brand-emblem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nallur-brand-title {
+    font-size: 1.05rem;
+    color: var(--color-maroon);
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.15;
+    letter-spacing: 0.2px;
+}
+
+.nallur-brand-location {
+    font-size: 0.72rem;
+    color: #7a6e65;
+    font-weight: 600;
+    display: block;
+    margin-top: 1px;
+}
+
+/* மொபைல் மெனு பொத்தான் */
+.nallur-menu-toggle {
+    display: none;
+    background: #fff8ee;
+    border: 1.5px solid var(--color-gold);
+    cursor: pointer;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--color-maroon);
+    font-size: 0.95rem;
+    align-items: center;
+    gap: 6px;
+}
+
+.nallur-mobile-drawer {
+    display: none;
+    background: #ffffff;
+    border-top: 1px solid #f0ebe1;
+    border-bottom: 3px solid var(--color-gold);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.nallur-mobile-drawer.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.nallur-mobile-menu {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+}
+
+.nallur-mobile-link {
+    display: block;
+    padding: 12px 24px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #2b0202;
+    text-decoration: none;
+    border-bottom: 1px solid #f7f3ec;
+    transition: background 0.2s ease;
+}
+
+.nallur-mobile-link:hover, .nallur-mobile-link.active {
+    background: #fff8eb;
+    color: var(--color-maroon);
+    border-left: 4px solid var(--color-gold);
+}
+
+/* -------------------------------------------------------------
+   நல்லூர் பாணி முகப்பு ஹீரோ (Nallur Temple Style Hero)
+   ------------------------------------------------------------- */
+.hero-nallur-style, .hero-murugan, .hero-section {
+    position: relative;
+    background: radial-gradient(circle at 50% 32%, rgba(229, 169, 59, 0.22) 0%, rgba(68, 4, 8, 0.95) 45%, #1f0103 100%),
+                linear-gradient(180deg, #3d0307 0%, #1a0102 100%);
+    color: #ffffff;
+    padding: 45px 0 60px;
+    text-align: center;
+    border-bottom: 4px solid var(--color-gold);
+    overflow: hidden;
+}
+
+/* உ குகமயம் புனித கல்வெட்டு */
+.divine-top-badge {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.sacred-letter-u {
+    font-size: 2.8rem;
+    font-family: var(--font-tamil-primary);
+    font-weight: 800;
+    color: var(--color-gold);
+    line-height: 1;
+    display: inline-block;
+    text-shadow: 0 0 20px rgba(229, 169, 59, 0.8), 0 2px 6px rgba(0, 0, 0, 0.8);
+    animation: divineGlow 3s ease-in-out infinite alternate;
+}
+
+.sacred-word-guha {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffd8a8;
+    letter-spacing: 4px;
+    margin-top: 2px;
+    display: block;
+    text-shadow: 0 0 10px rgba(229, 169, 59, 0.5);
+}
+
+@keyframes divineGlow {
+    from { filter: drop-shadow(0 0 8px rgba(229, 169, 59, 0.6)); }
+    to { filter: drop-shadow(0 0 20px rgba(229, 169, 59, 0.95)); }
+}
+
+/* தேவஸ்தான முதன்மை தலைப்பு */
+.hero-header-text {
+    max-width: 920px;
+    margin: 0 auto 24px;
+}
+
+.temple-hero-main-title {
+    font-size: 2.7rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.25;
+    margin: 8px 0 14px;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8);
+    font-family: var(--font-tamil-primary);
+}
+
+.temple-hero-main-title span {
+    color: var(--color-gold);
+    display: inline-block;
+    background: linear-gradient(135deg, #ffd8a8 0%, #e5a93b 50%, #f77f00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.temple-hero-subtitle {
+    color: #ffd8a8;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.temple-hero-desc {
+    color: #f7e4d5;
+    font-size: 1.06rem;
+    line-height: 1.75;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* பிரம்மாண்ட கோவில் ராஜகோபுர படம் (Grand Temple Front Centerpiece) */
+.temple-grand-image-wrapper {
+    max-width: 500px;
+    margin: 28px auto 35px;
+    padding: 0 15px;
+    position: relative;
+}
+
+.temple-image-frame {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 4px solid var(--color-gold);
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.75), 0 0 45px rgba(229, 169, 59, 0.35);
+    background: #0f0001;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.temple-image-frame:hover {
+    transform: translateY(-8px) scale(1.015);
+    box-shadow: 0 30px 75px rgba(0, 0, 0, 0.85), 0 0 60px rgba(229, 169, 59, 0.55);
+}
+
+.temple-grand-img {
+    width: 100%;
+    height: auto;
+    max-height: 640px;
+    display: block;
+    object-fit: cover;
+}
+
+.temple-image-caption-badge {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(33, 2, 5, 0.88);
+    backdrop-filter: blur(8px);
+    border: 1.5px solid var(--color-gold);
+    color: #ffd8a8;
+    padding: 8px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    white-space: nowrap;
+}
+
+/* விரைவு செயல் பலகை (Quick Action Tabs under Image) */
+.hero-quick-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.quick-tab-btn {
+    padding: 13px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.quick-tab-btn.btn-gold {
+    background: linear-gradient(135deg, #e5a93b 0%, #f77f00 100%);
+    color: #250204;
+    box-shadow: 0 6px 20px rgba(229, 169, 59, 0.4);
+}
+
+.quick-tab-btn.btn-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(229, 169, 59, 0.6);
+    color: #000000;
+}
+
+.quick-tab-btn.btn-maroon {
+    background: rgba(43, 2, 4, 0.85);
+    color: #ffffff;
+    border: 1.5px solid var(--color-gold);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.quick-tab-btn.btn-maroon:hover {
+    background: var(--color-maroon);
+    border-color: #ffd8a8;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(104, 5, 9, 0.6);
+    color: #ffd8a8;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-saffron) 100%);
+    color: #2b0202;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 13px 28px;
+    border-radius: var(--radius-sm);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(247, 127, 0, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(247, 127, 0, 0.5);
+    color: #1a0101;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 12px 26px;
+    border-radius: var(--radius-sm);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(4px);
+}
+
+.btn-secondary:hover {
+    background: #ffffff;
+    color: var(--color-maroon);
+    border-color: #ffffff;
+}
+
+/* இன்றைய தரிசன நேரம் பட்டை (Today's Timings Bar) */
+.timings-bar-wrapper {
+    margin-top: -45px;
+    position: relative;
+    z-index: 20;
+    margin-bottom: 60px;
+}
+
+.timings-card {
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+    border-top: 4px solid var(--color-gold);
+    padding: 24px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.timings-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.timings-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--color-saffron-light);
+    color: var(--color-saffron);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.timings-text h4 {
+    font-size: 0.95rem;
+    color: #8c827a;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.timings-text p {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-maroon);
+    margin: 2px 0 0;
+}
+
+/* -------------------------------------------------------------
+   பிரிவுகள் & தலைப்புகள் (Sections & Headings)
+   ------------------------------------------------------------- */
+.section {
+    padding: 70px 0;
+    position: relative;
+}
+
+.section-bg-alt {
+    background-color: rgba(247, 242, 231, 0.88);
+    backdrop-filter: blur(4px);
+}
+
+.section-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 45px;
+}
+
+.section-subtitle {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-saffron);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 8px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: var(--color-maroon);
+    margin-bottom: 12px;
+    position: relative;
+    padding-bottom: 14px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-maroon), var(--color-gold));
+    border-radius: 2px;
+}
+
+.section-desc {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+}
+
+/* -------------------------------------------------------------
+   நிகழ்வுகள் அட்டை & கட்டம் (Events Grid & Cards)
+   ------------------------------------------------------------- */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 30px;
+}
+
+.event-card {
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-gold);
+}
+
+.event-thumb-wrap {
+    position: relative;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.event-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.event-card:hover .event-thumb-wrap img {
+    transform: scale(1.05);
+}
+
+.event-date-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(63, 3, 6, 0.9);
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-left: 3px solid var(--color-gold);
+    backdrop-filter: blur(3px);
+}
+
+.event-photo-count {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #ffd8a8;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.event-body {
+    padding: 22px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-category-badge {
+    align-self: flex-start;
+    background: var(--color-saffron-light);
+    color: #b45309;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.event-title {
+    font-size: 1.22rem;
+    color: var(--color-maroon);
+    margin-bottom: 10px;
+    line-height: 1.35;
+}
+
+.event-snippet {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+.event-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    border-top: 1px solid #f2ece2;
+}
+
+.btn-view-photos {
+    color: var(--color-maroon);
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-view-photos:hover {
+    color: var(--color-saffron);
+}
+
+/* -------------------------------------------------------------
+   புகைப்பட தொகுப்பு & ஆல்பம் (Gallery & Album Styles)
+   ------------------------------------------------------------- */
+.gallery-filter-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.filter-btn {
+    background: #ffffff;
+    border: 1.5px solid var(--border-color);
+    color: #4b5563;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--color-maroon);
+    color: #ffffff;
+    border-color: var(--color-maroon);
+    box-shadow: 0 4px 12px rgba(104, 5, 9, 0.2);
+}
+
+.album-card {
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    margin-bottom: 45px;
+}
+
+.album-header {
+    background: #fbf9f4;
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.album-header-info h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--color-maroon);
+}
+
+.album-header-info span {
+    font-size: 0.88rem;
+    color: #78716c;
+}
+
+.btn-download-album {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1.5px solid #f59e0b;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+}
+
+.btn-download-album:hover {
+    background: #f59e0b;
+    color: #ffffff;
+}
+
+.photos-masonry {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    padding: 22px;
+}
+
+.photo-item {
+    position: relative;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background-color: #f3f3f3;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    group: relative;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.08);
+}
+
+.photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(45, 2, 4, 0.85) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 16px;
+    color: #ffffff;
+}
+
+.photo-item:hover .photo-overlay {
+    opacity: 1;
+}
+
+.photo-caption {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+.photo-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-icon-action {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--color-maroon);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-icon-action:hover {
+    background: var(--color-gold);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* -------------------------------------------------------------
+   லைட்பாக்ஸ் மாதிரி (Lightbox Modal)
+   ------------------------------------------------------------- */
+.lightbox-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 1, 2, 0.95);
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.lightbox-modal.active {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 90vw;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-caption-bar {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    color: #ffffff;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.lightbox-prev, .lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    transition: all 0.2s;
+}
+
+.lightbox-prev { left: -65px; }
+.lightbox-next { right: -65px; }
+
+.lightbox-prev:hover, .lightbox-next:hover {
+    background: var(--color-gold);
+    color: #2b0202;
+}
+
+/* -------------------------------------------------------------
+   பூஜை அட்டவணை அட்டவணை (Pooja Timings Table)
+   ------------------------------------------------------------- */
+.pooja-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.pooja-card {
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    padding: 24px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+    border-top: 4px solid var(--color-gold);
+}
+
+.pooja-card::before {
+    content: '🔔';
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    font-size: 3rem;
+    opacity: 0.06;
+}
+
+.pooja-time-badge {
+    background: var(--color-saffron-light);
+    color: #92400e;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.pooja-name {
+    font-size: 1.25rem;
+    color: var(--color-maroon);
+    margin-bottom: 6px;
+}
+
+.pooja-deity {
+    font-size: 0.95rem;
+    color: var(--color-saffron);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.pooja-desc {
+    color: var(--color-text-muted);
+    font-size: 0.92rem;
+    line-height: 1.55;
+}
+
+/* -------------------------------------------------------------
+   திருவிழாக்கள் அட்டை (Festival Cards)
+   ------------------------------------------------------------- */
+.festival-card {
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.festival-img-wrap {
+    width: 35%;
+    min-height: 240px;
+    position: relative;
+}
+
+.festival-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.festival-info {
+    width: 65%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.festival-month {
+    color: var(--color-saffron);
+    font-weight: 700;
+    font-size: 0.92rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.festival-title {
+    font-size: 1.45rem;
+    color: var(--color-maroon);
+    margin-bottom: 12px;
+}
+
+.festival-desc {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+/* -------------------------------------------------------------
+   காணிக்கை & தொடர்பு பகுதி (Donation & Contact)
+   ------------------------------------------------------------- */
+.donation-banner {
+    background: linear-gradient(135deg, var(--color-maroon-dark) 0%, var(--color-maroon) 100%);
+    color: #ffffff;
+    border-radius: var(--radius-lg);
+    padding: 45px;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid var(--color-gold);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.donation-text h2 {
+    color: #ffffff;
+    font-size: 2.1rem;
+    margin-bottom: 14px;
+}
+
+.donation-text p {
+    color: #ffecd2;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    margin-bottom: 24px;
+}
+
+.bank-details-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    padding: 22px;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(229, 169, 59, 0.4);
+}
+
+.bank-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 0.95rem;
+}
+
+.bank-row:last-child {
+    border-bottom: none;
+}
+
+.bank-label {
+    color: #ffd8a8;
+}
+
+.bank-val {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* -------------------------------------------------------------
+   அடிக்குறிப்பு (Footer)
+   ------------------------------------------------------------- */
+.site-footer {
+    background: #250204;
+    color: #d8c8b8;
+    padding: 28px 0 16px;
+    border-top: 3px solid var(--color-gold);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 28px;
+    margin-bottom: 22px;
+}
+
+.footer-col h4 {
+    color: var(--color-gold);
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+    position: relative;
+    padding-bottom: 6px;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--color-gold);
+}
+
+.footer-col p {
+    line-height: 1.55;
+    margin: 0;
+}
+
+.footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 6px;
+}
+
+.footer-links a {
+    color: #d8c8b8;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-links a:hover {
+    color: var(--color-gold);
+    transform: translateX(4px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 14px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #9c8a7b;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* பக்கங்களில் வெறும் காப்பிரைட் பட்டை மட்டும் உள்ள போது (Sleek single-line footer) */
+.site-footer:not(:has(.footer-grid)) {
+    padding: 14px 0;
+}
+
+.site-footer:not(:has(.footer-grid)) .footer-bottom {
+    border-top: none;
+    padding-top: 0;
+}
+
+/* -------------------------------------------------------------
+   மொபைல் ரெஸ்பான்சிவ் வடிவமைப்பு (Mobile Responsiveness)
+   ------------------------------------------------------------- */
+@media (max-width: 992px) {
+    .festival-card {
+        flex-direction: column;
+    }
+    .festival-img-wrap, .festival-info {
+        width: 100%;
+    }
+    .donation-banner {
+        grid-template-columns: 1fr;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .menu-toggle {
+        display: inline-flex;
+    }
+    .header-tab-bar {
+        display: none;
+    }
+    .header-tab-bar.active {
+        display: block;
+        background: #2b0204;
+        animation: fadeIn 0.3s ease;
+    }
+    .nav-menu {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 0;
+    }
+    .nav-link {
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0;
+        color: #ffd8a8;
+    }
+    .nav-link.active {
+        border-radius: 0;
+        border-bottom-color: var(--color-gold);
+        background: linear-gradient(180deg, #fceecb 0%, #e5a93b 100%);
+        color: #2b0202;
+    }
+    .btn-admin-nav {
+        margin: 10px 20px;
+        text-align: center;
+        justify-content: center;
+    }
+    .temple-brand-text h1 {
+        font-size: 1.1rem;
+    }
+    .temple-grand-image-wrapper {
+        max-width: 92%;
+    }
+    .temple-hero-main-title {
+        font-size: 2.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-om {
+        font-size: 3rem;
+    }
+    .timings-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    .top-contact-info {
+        display: none;
+    }
+    .lightbox-prev { left: 10px; }
+    .lightbox-next { right: 10px; }
+}
+
+/* -------------------------------------------------------------
+   திரை உருளல் அனிமேஷன் விளைவுகள் (Scroll Reveal Animations)
+   ------------------------------------------------------------- */
+.reveal {
+    opacity: 0;
+    transform: translateY(38px);
+    transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal.reveal-left {
+    transform: translateX(-45px);
+}
+
+.reveal.reveal-right {
+    transform: translateX(45px);
+}
+
+.reveal.reveal-zoom {
+    transform: scale(0.92);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+/* Stagger delays for child items */
+.reveal-stagger > *:nth-child(1) { transition-delay: 0.08s; }
+.reveal-stagger > *:nth-child(2) { transition-delay: 0.18s; }
+.reveal-stagger > *:nth-child(3) { transition-delay: 0.28s; }
+.reveal-stagger > *:nth-child(4) { transition-delay: 0.38s; }
+.reveal-stagger > *:nth-child(5) { transition-delay: 0.48s; }
+.reveal-stagger > *:nth-child(6) { transition-delay: 0.58s; }
+
+/* Hero floating animation */
+@keyframes heroBadgeFloat {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        box-shadow: 0 8px 25px rgba(229, 169, 59, 0.35);
+    }
+    50% {
+        transform: translateY(-9px) scale(1.03);
+        box-shadow: 0 16px 35px rgba(229, 169, 59, 0.55);
+    }
+}
+
+.profile-badge-wrap {
+    animation: heroBadgeFloat 4s ease-in-out infinite;
+    display: inline-block;
+}
+
+/* Card hover lift effect */
+.event-card, .album-card, .donation-banner, .feature-box, .pooja-card, .stat-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 16px 35px rgba(104, 5, 9, 0.14);
+}
+
+.photo-item {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.photo-item:hover {
+    transform: scale(1.03);
+    z-index: 2;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal.reveal-left, .reveal.reveal-right, .reveal.reveal-zoom {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}

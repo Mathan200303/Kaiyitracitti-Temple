@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ஸ்தல வரலாறு | கைதடி வடக்கு கயிற்றசிட்டி அருள்மிகு கந்தசுவாமி தேவஸ்தானம்</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=20260925_06">
+    <style>
+        body, button, input, select, textarea {
+            font-family: 'Mukta Malar', 'Noto Sans Tamil', 'Nirmala UI', 'Latha', 'Vijaya', sans-serif !important;
+        }
+        .temple-logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--color-gold);
+            object-fit: cover;
+        }
+        .history-hero {
+            background: linear-gradient(rgba(35, 2, 4, 0.8), rgba(55, 3, 7, 0.85)), 
+                        url('images/gopuram_front.jpg') center top/cover no-repeat;
+            padding: 70px 0;
+            color: #ffffff;
+            text-align: center;
+        }
+        .history-article {
+            background: #ffffff;
+            border-radius: var(--radius-md);
+            padding: 45px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            margin-bottom: 40px;
+            line-height: 1.9;
+            font-size: 1.05rem;
+            color: #374151;
+        }
+        .history-article h2 {
+            color: var(--color-maroon);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.55rem;
+            border-left: 4px solid var(--color-gold);
+            padding-left: 14px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 35px 0;
+        }
+        .feature-box {
+            background: #fffdfa;
+            border-radius: var(--radius-sm);
+            padding: 24px;
+            border: 1px solid #ebdcd0;
+            border-top: 3px solid var(--color-gold);
+        }
+        .feature-box h3 {
+            margin: 0 0 10px;
+            font-size: 1.25rem;
+            color: var(--color-maroon);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+
+        <!-- நல்லூர் பாணி தேவஸ்தான முதன்மை Tab Bar (Nallur Style Header) -->
+    <header class="nallur-header" id="mainHeader">
+        <div class="container nallur-header-container">
+            <!-- இடது பக்க மெனு (Left Wing) -->
+            <ul class="nallur-nav-wing nallur-nav-left">
+                <li><a href="index.html" class="nallur-nav-link">முகப்பு</a></li>
+                <li><a href="history.html" class="nallur-nav-link active">ஸ்தல வரலாறு</a></li>
+                <li><a href="events.html" class="nallur-nav-link">தினசரி நிகழ்வுகள்</a></li>
+                <li><a href="pooja.html" class="nallur-nav-link">பூஜை நேரங்கள்</a></li>
+            </ul>
+
+            <!-- மத்திய தேவஸ்தான இலச்சினை (Center Emblem & Brand) -->
+            <a href="index.html" class="nallur-center-brand">
+                <div class="nallur-brand-emblem">
+                    <img src="images/kovil_front_hero.jpg" alt="கைதடி கந்தசுவாமி தேவஸ்தானம்">
+                </div>
+                <h1 class="nallur-brand-title">கைதடி கந்தசுவாமி தேவஸ்தானம்</h1>
+                <span class="nallur-brand-location">வடக்கு கயிற்றசிட்டி, யாழ்ப்பாணம்</span>
+            </a>
+
+            <!-- வலது பக்க மெனு (Right Wing) -->
+            <ul class="nallur-nav-wing nallur-nav-right">
+                <li><a href="festivals.html" class="nallur-nav-link">உற்சவங்கள்</a></li>
+                <li><a href="gallery.html" class="nallur-nav-link">புகைப்படங்கள்</a></li>
+                <li><a href="contact.html" class="nallur-nav-link">தொடர்புகளுக்கு</a></li>
+            </ul>
+
+            <!-- மொபைல் மெனு பொத்தான் -->
+            <button class="nallur-menu-toggle" id="menuToggle" aria-label="Menu">☰ மெனு</button>
+        </div>
+
+        <!-- மொபைல் மெனு (Mobile Drawer) -->
+        <div class="nallur-mobile-drawer" id="mobileDrawer">
+            <ul class="nallur-mobile-menu">
+                <li><a href="index.html" class="nallur-mobile-link">முகப்பு</a></li>
+                <li><a href="history.html" class="nallur-mobile-link active">ஸ்தல வரலாறு</a></li>
+                <li><a href="events.html" class="nallur-mobile-link">தினசரி நிகழ்வுகள்</a></li>
+                <li><a href="pooja.html" class="nallur-mobile-link">பூஜை நேரங்கள்</a></li>
+                <li><a href="festivals.html" class="nallur-mobile-link">உற்சவங்கள்</a></li>
+                <li><a href="gallery.html" class="nallur-mobile-link">புகைப்படங்கள்</a></li>
+                <li><a href="contact.html" class="nallur-mobile-link">தொடர்புகளுக்கு</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- தலைப்பு பகுதி -->
+    <section class="history-hero">
+        <div class="container">
+            <div style="font-size: 3rem; color: var(--color-gold);">ௐ சரவணபவ</div>
+            <h1 id="historyHeroTitle" style="color: #ffffff; font-size: 2.3rem; margin-top: 8px;">கைதடி அருள்மிகு கந்தசுவாமி ஸ்தல வரலாறு</h1>
+            <p id="historyHeroSubtitle" style="color: #ffeedd; font-size: 1.15rem; max-width: 700px; margin: 12px auto 0;">
+                யாழ்ப்பாணம் கைதடி வடக்கு கயிற்றசிட்டி கிராமத்தில் அருள்பாலிக்கும் வேலவர் திருக்கோவில் ஆன்மீகப் பெருமைகள்
+            </p>
+        </div>
+    </section>
+
+    <!-- முதன்மை கட்டுரை பகுதி -->
+    <main class="section">
+        <div class="container" style="max-width: 960px;">
+            <article class="history-article">
+                <h2 id="historySec1Title">தேவஸ்தானத்தின் தோற்றமும் வழிபாட்டுச் சிறப்பும்</h2>
+                <p id="historySec1Text">
+                    யாழ்ப்பாணத்தின் வரலாற்றுச் சிறப்புமிக்க கிராமங்களில் ஒன்றான கைதடி வடக்கு, கயிற்றசிட்டி மண்ணில் 
+                    எழுந்தருளி அருள்பாலிக்கும் <strong>அருள்மிகு கந்தசுவாமி தேவஸ்தானம்</strong> பல தலைமுறைகளாக மக்களின் 
+                    ஆன்மீகப் புகலிடமாக விளங்கி வருகிறது. மூலஸ்தானத்தில் வேலாயுதமும், உற்சவ மூர்த்தியாக வள்ளி தெய்வானை சமேத 
+                    கந்தசுவாமி பெருமானும் வீற்றிருந்து அடியார்களுக்கு வேண்டும் வரங்களை அள்ளி வழங்குகின்றனர்.
+                </p>
+
+                <div class="feature-grid">
+                    <div class="feature-box">
+                        <h3><span>🪶</span> மூலவர் மூர்த்தி</h3>
+                        <p>வேலும் மயிலும் தாங்கி நிற்கும் <strong>அருள்மிகு கந்தசுவாமி</strong>. ஞானமும் வீரமும் அருளும் கருணைக் கடவுள்.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3><span>📍</span> கிராமியப் பெருமை</h3>
+                        <p><strong>கைதடி வடக்கு கயிற்றசிட்டி</strong> கிராமத்து மக்களின் குலதெய்வமாகவும் காவல் தெய்வமாகவும் வழிபடப்படுகிறார்.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3><span>🔔</span> ஆகம பூஜா முறை</h3>
+                        <p>சைவாகம முறைப்படி தினசரி நித்திய ஆறு கால பூஜைகள் மற்றும் சஷ்டி விரத வழிபாடுகள் செவ்வனே நடைபெறுகின்றன.</p>
+                    </div>
+                </div>
+
+                <h2 id="historySec2Title">வண்ணமிகு ராஜகோபுரமும் சிற்ப அழகும்</h2>
+                <p id="historySec2Text">
+                    அண்மையில் திருப்பணி செய்யப்பட்டு வர்ண அலங்காரங்களுடன் கம்பீரமாக வானுயர்ந்து நிற்கும் தேவஸ்தான ராஜகோபுரம் 
+                    இப்பகுதியின் ஆன்மீக அடையாளமாகத் திகழ்கிறது. கோபுரத்தின் உச்சியில் <em>"ஸ்ரீ முருகா"</em> என்ற மங்கல ஜோதியுடன் 
+                    பல புராண சுதைச் சிற்பங்கள், துவாரபாலகர்கள், மயில் வாகனம் மற்றும் தேவ கணங்கள் அற்புதமாக வடிக்கப்பட்டுள்ளன. 
+                    கோபுர தரிசனம் கோடி புண்ணியம் என்பதற்கேற்ப, இக்கோபுரத்தை தரிசிப்பதே பக்தர்களுக்கு எல்லையற்ற மன அமைதியை வழங்குகிறது.
+                </p>
+
+                <h2 id="historySec3Title">கந்தசஷ்டி மற்றும் வருடாந்திர பெருவிழாக்கள்</h2>
+                <p id="historySec3Text">
+                    ஆண்டுதோறும் ஐப்பசி மாதத்தில் நடைபெறும் கந்தசஷ்டி பெருவிழா தேவஸ்தானத்தின் பிரதான உற்சவமாகும். 
+                    சூரசம்ஹார வைபவத்தன்று சூரபத்மனை முருகப்பெருமான் வதம் செய்து ஆட்கொள்ளும் காட்சியை பல்லாயிரக்கணக்கான பக்தர்கள் 
+                    கண்டு மெய்சிலிர்க்கின்றனர். அதனைத் தொடர்ந்து நடைபெறும் திருக்கல்யாண வைபவம் மற்றும் மாசி மகம், தைப்பூசம், 
+                    வைகாசி விசாகம், பங்குனி உத்திரம் ஆகிய விசேஷ தினங்களில் சுவாமியின் திருவீதி உலாக்கள் கோலாகலமாக நடைபெறுகின்றன.
+                </p>
+
+                <h2 id="historySec4Title">நித்திய அன்னதானமும் ஆலயத் திருப்பணியும்</h2>
+                <p id="historySec4Text">
+                    <em>"அன்னதானம் செய்வோர்க்கு அகிலமெல்லாம் வசமாகும்"</em> என்பதற்கேற்ப, கந்தசுவாமி தேவஸ்தானத்தில் தினசரி 
+                    பக்தர்களுக்கு நைவேத்திய பிரசாதமும் அன்னதானமும் வழங்கப்பட்டு வருகிறது. உள்நாட்டு மற்றும் புலம்பெயர் அடியார்களின் 
+                    பேரன்பினாலும் நன்கொடைகளினாலும் ஆலயம் நாளுக்கு நாள் பொலிவுபெற்று வருகிறது.
+                </p>
+            </article>
+
+            <div style="text-align: center;">
+                <a href="gallery.html" class="btn-primary" style="margin-right: 15px;">
+                    <span>📸</span> தேவஸ்தான புகைப்படங்களைப் பார்க்க
+                </a>
+                <a href="events.html" class="btn-secondary" style="background: var(--color-maroon); color: #fff;">
+                    <span>📅</span> விசேஷ நிகழ்வுகள்
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- அடிக்குறிப்பு -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 கைதடி வடக்கு கயிற்றசிட்டி அருள்மிகு கந்தசுவாமி தேவஸ்தானம். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js?v=20260925_06"></script>
+    <script>
+        (async function() {
+            let h = null;
+            try {
+                const res = await fetch(`${API_BASE}/settings.php`);
+                if (res.ok) {
+                    const json = await res.json();
+                    if (json.status && json.data && json.data.history_full) {
+                        try {
+                            const parsed = JSON.parse(json.data.history_full);
+                            if (parsed && parsed.heroTitle) {
+                                h = parsed;
+                                localStorage.setItem('temple_history', JSON.stringify(h));
+                            }
+                        } catch(e) {}
+                    }
+                }
+            } catch(err) {}
+
+            if (!h) {
+                const raw = localStorage.getItem('temple_history');
+                if (raw) {
+                    try { h = JSON.parse(raw); } catch(e) {}
+                }
+            }
+
+            if (!h) return;
+            if (h.heroTitle) document.getElementById('historyHeroTitle').innerText = h.heroTitle;
+            if (h.heroSubtitle) document.getElementById('historyHeroSubtitle').innerText = h.heroSubtitle;
+            if (h.sec1Title) document.getElementById('historySec1Title').innerText = h.sec1Title;
+            if (h.sec1Text) document.getElementById('historySec1Text').innerHTML = h.sec1Text.replace(/\n/g, '<br>');
+            if (h.sec2Title) document.getElementById('historySec2Title').innerText = h.sec2Title;
+            if (h.sec2Text) document.getElementById('historySec2Text').innerHTML = h.sec2Text.replace(/\n/g, '<br>');
+            if (h.sec3Title) document.getElementById('historySec3Title').innerText = h.sec3Title;
+            if (h.sec3Text) document.getElementById('historySec3Text').innerHTML = h.sec3Text.replace(/\n/g, '<br>');
+            if (h.sec4Title) document.getElementById('historySec4Title').innerText = h.sec4Title;
+            if (h.sec4Text) document.getElementById('historySec4Text').innerHTML = h.sec4Text.replace(/\n/g, '<br>');
+        })();
+    </script>
+</body>
+</html>

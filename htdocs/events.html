@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>தினசரி நிகழ்வுகள் | கைதடி வடக்கு கயிற்றசிட்டி அருள்மிகு கந்தசுவாமி தேவஸ்தானம்</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=20260925_06">
+    <style>
+        body, button, input, select, textarea {
+            font-family: 'Mukta Malar', 'Noto Sans Tamil', 'Nirmala UI', 'Latha', 'Vijaya', sans-serif !important;
+        }
+        .temple-logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--color-gold);
+            object-fit: cover;
+        }
+        .page-banner {
+            background: linear-gradient(rgba(35, 2, 4, 0.8), rgba(55, 3, 7, 0.85)), 
+                        url('images/gopuram_front.jpg') center top/cover no-repeat;
+            padding: 60px 0;
+            color: #ffffff;
+            text-align: center;
+        }
+        .search-bar-wrap {
+            max-width: 500px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+        .search-bar-wrap input {
+            width: 100%;
+            padding: 13px 20px 13px 44px;
+            border-radius: 30px;
+            border: 2px solid var(--border-color);
+            font-size: 1rem;
+            outline: none;
+            box-shadow: var(--shadow-sm);
+        }
+        .search-bar-wrap input:focus {
+            border-color: var(--color-gold);
+            box-shadow: 0 0 0 4px rgba(229, 169, 59, 0.2);
+        }
+        .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9ca3af;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+        <!-- நல்லூர் பாணி தேவஸ்தான முதன்மை Tab Bar (Nallur Style Header) -->
+    <header class="nallur-header" id="mainHeader">
+        <div class="container nallur-header-container">
+            <!-- இடது பக்க மெனு (Left Wing) -->
+            <ul class="nallur-nav-wing nallur-nav-left">
+                <li><a href="index.html" class="nallur-nav-link">முகப்பு</a></li>
+                <li><a href="history.html" class="nallur-nav-link">ஸ்தல வரலாறு</a></li>
+                <li><a href="events.html" class="nallur-nav-link active">தினசரி நிகழ்வுகள்</a></li>
+                <li><a href="pooja.html" class="nallur-nav-link">பூஜை நேரங்கள்</a></li>
+            </ul>
+
+            <!-- மத்திய தேவஸ்தான இலச்சினை (Center Emblem & Brand) -->
+            <a href="index.html" class="nallur-center-brand">
+                <div class="nallur-brand-emblem">
+                    <img src="images/kovil_front_hero.jpg" alt="கைதடி கந்தசுவாமி தேவஸ்தானம்">
+                </div>
+                <h1 class="nallur-brand-title">கைதடி கந்தசுவாமி தேவஸ்தானம்</h1>
+                <span class="nallur-brand-location">வடக்கு கயிற்றசிட்டி, யாழ்ப்பாணம்</span>
+            </a>
+
+            <!-- வலது பக்க மெனு (Right Wing) -->
+            <ul class="nallur-nav-wing nallur-nav-right">
+                <li><a href="festivals.html" class="nallur-nav-link">உற்சவங்கள்</a></li>
+                <li><a href="gallery.html" class="nallur-nav-link">புகைப்படங்கள்</a></li>
+                <li><a href="contact.html" class="nallur-nav-link">தொடர்புகளுக்கு</a></li>
+            </ul>
+
+            <!-- மொபைல் மெனு பொத்தான் -->
+            <button class="nallur-menu-toggle" id="menuToggle" aria-label="Menu">☰ மெனு</button>
+        </div>
+
+        <!-- மொபைல் மெனு (Mobile Drawer) -->
+        <div class="nallur-mobile-drawer" id="mobileDrawer">
+            <ul class="nallur-mobile-menu">
+                <li><a href="index.html" class="nallur-mobile-link">முகப்பு</a></li>
+                <li><a href="history.html" class="nallur-mobile-link">ஸ்தல வரலாறு</a></li>
+                <li><a href="events.html" class="nallur-mobile-link active">தினசரி நிகழ்வுகள்</a></li>
+                <li><a href="pooja.html" class="nallur-mobile-link">பூஜை நேரங்கள்</a></li>
+                <li><a href="festivals.html" class="nallur-mobile-link">உற்சவங்கள்</a></li>
+                <li><a href="gallery.html" class="nallur-mobile-link">புகைப்படங்கள்</a></li>
+                <li><a href="contact.html" class="nallur-mobile-link">தொடர்புகளுக்கு</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- பதாகை -->
+    <section class="page-banner">
+        <div class="container">
+            <div style="font-size: 2.8rem; color: var(--color-gold);">ௐ சரவணபவ</div>
+            <h1 style="color: #ffffff; font-size: 2.3rem; margin-top: 8px;">தினசரி விசேஷ நிகழ்வுகள் & வைபவங்கள்</h1>
+            <p style="color: #ffeedd; font-size: 1.1rem; max-width: 650px; margin: 10px auto 0;">
+                கந்தவேள் திருக்கோவிலில் நாள்தோறும் நடைபெறும் சிறப்பு அபிஷேகங்கள், திருக்கல்யாணம், தீபாராதனை மற்றும் உற்சவ விபரங்கள்
+            </p>
+        </div>
+    </section>
+
+    <!-- நிகழ்வுகள் பட்டியல் பகுதி -->
+    <main class="section">
+        <div class="container">
+
+            <!-- தேடல் பெட்டி -->
+            <div class="search-bar-wrap">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="eventSearchInput" placeholder="நிகழ்வின் பெயரை அல்லது வகையைத் தேடவும்...">
+            </div>
+
+            <!-- வகைகள் வடிகட்டி பொத்தான்கள் -->
+            <div class="gallery-filter-bar">
+                <button class="filter-btn active" data-category="all">அனைத்து நிகழ்வுகளும்</button>
+                <button class="filter-btn" data-category="திருவிழா">திருவிழாக்கள்</button>
+                <button class="filter-btn" data-category="அபிஷேகம்">சிறப்பு அபிஷேகம்</button>
+                <button class="filter-btn" data-category="விசேஷ பூஜை">விசேஷ பூஜைகள்</button>
+                <button class="filter-btn" data-category="சஷ்டி விரதம்">சஷ்டி விரதம்</button>
+                <button class="filter-btn" data-category="அன்னதானம்">அன்னதானம்</button>
+            </div>
+
+            <!-- நிகழ்வுகள் கட்டம் -->
+            <div class="events-grid" id="eventsListGrid">
+                <!-- Javascript will populate events here -->
+            </div>
+
+        </div>
+    </main>
+
+    <!-- அடிக்குறிப்பு -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 கைதடி வடக்கு கயிற்றசிட்டி அருள்மிகு கந்தசுவாமி தேவஸ்தானம். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js?v=20260925_06"></script>
+    <script src="js/events.js"></script>
+</body>
+</html>

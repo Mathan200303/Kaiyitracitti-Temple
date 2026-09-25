@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>கைதடி வடக்கு கயிற்றசிட்டி அருள்மிகு கந்தசுவாமி தேவஸ்தானம்</title>
+    <!-- Google Fonts for Tamil with Windows Nirmala UI & Latha fallbacks -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=20260925_06">
+    <!-- JSZip for album zip downloads -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <style>
+        body, button, input, select, textarea {
+            font-family: 'Mukta Malar', 'Noto Sans Tamil', 'Nirmala UI', 'Latha', 'Vijaya', sans-serif !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- நல்லூர் பாணி தேவஸ்தான முதன்மை Tab Bar (Nallur Style Header) -->
+    <header class="nallur-header" id="mainHeader">
+        <div class="container nallur-header-container">
+            <!-- இடது பக்க மெனு (Left Wing) -->
+            <ul class="nallur-nav-wing nallur-nav-left">
+                <li><a href="index.html" class="nallur-nav-link active">முகப்பு</a></li>
+                <li><a href="history.html" class="nallur-nav-link">ஸ்தல வரலாறு</a></li>
+                <li><a href="events.html" class="nallur-nav-link">தினசரி நிகழ்வுகள்</a></li>
+                <li><a href="pooja.html" class="nallur-nav-link">பூஜை நேரங்கள்</a></li>
+            </ul>
+
+            <!-- மத்திய தேவஸ்தான இலச்சினை (Center Emblem & Brand) -->
+            <a href="index.html" class="nallur-center-brand">
+                <div class="nallur-brand-emblem">
+                    <img src="images/kovil_front_hero.jpg" alt="கைதடி கந்தசுவாமி தேவஸ்தானம்">
+                </div>
+                <h1 class="nallur-brand-title">கைதடி கந்தசுவாமி தேவஸ்தானம்</h1>
+                <span class="nallur-brand-location">வடக்கு கயிற்றசிட்டி, யாழ்ப்பாணம்</span>
+            </a>
+
+            <!-- வலது பக்க மெனு (Right Wing) -->
+            <ul class="nallur-nav-wing nallur-nav-right">
+                <li><a href="festivals.html" class="nallur-nav-link">உற்சவங்கள்</a></li>
+                <li><a href="gallery.html" class="nallur-nav-link">புகைப்படங்கள்</a></li>
+                <li><a href="contact.html" class="nallur-nav-link">தொடர்புகளுக்கு</a></li>
+            </ul>
+
+            <!-- மொபைல் மெனு பொத்தான் -->
+            <button class="nallur-menu-toggle" id="menuToggle" aria-label="Menu">☰ மெனு</button>
+        </div>
+
+        <!-- மொபைல் மெனு (Mobile Drawer) -->
+        <div class="nallur-mobile-drawer" id="mobileDrawer">
+            <ul class="nallur-mobile-menu">
+                <li><a href="index.html" class="nallur-mobile-link active">முகப்பு</a></li>
+                <li><a href="history.html" class="nallur-mobile-link">ஸ்தல வரலாறு</a></li>
+                <li><a href="events.html" class="nallur-mobile-link">தினசரி நிகழ்வுகள்</a></li>
+                <li><a href="pooja.html" class="nallur-mobile-link">பூஜை நேரங்கள்</a></li>
+                <li><a href="festivals.html" class="nallur-mobile-link">உற்சவங்கள்</a></li>
+                <li><a href="gallery.html" class="nallur-mobile-link">புகைப்படங்கள்</a></li>
+                <li><a href="contact.html" class="nallur-mobile-link">தொடர்புகளுக்கு</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- முகப்பு ஹீரோ பகுதி (நல்லூர் தேவஸ்தான பாணி) -->
+    <section class="hero-nallur-style">
+        <div class="container hero-container">
+            <!-- புனித பிரணவ அடையாளம் (ௐ) -->
+            <div class="divine-top-badge reveal">
+                <div class="sacred-letter-u">ௐ</div>
+            </div>
+
+            <!-- தேவஸ்தான முதன்மை தலைப்பு -->
+            <div class="hero-header-text reveal">
+                <h1 class="temple-hero-main-title">
+                    கைதடி வடக்கு கயிற்றசிட்டி<br>
+                    <span>அருள்மிகு கந்தசுவாமி தேவஸ்தானம்</span>
+                </h1>
+                <div class="temple-hero-subtitle">
+                    ✦ அலங்காரக் கந்தா !!! ✦ வெற்றிவேல் முருகனுக்கு அரோகரா! வீரவேல் முருகனுக்கு அரோகரா! ✦
+                </div>
+                <p class="temple-hero-desc">
+                    ஆதி தொன்மை வாய்ந்த புண்ணிய கந்தவேள் திருத்தலம். தினசரி ஆறு கால பூஜைகள், விசேஷ அபிஷேகங்கள் மற்றும் 
+                    ஆண்டுப் பெருவிழாக்களின் புகைப்படங்களை உடனுக்குடன் கண்டு கந்தப்பெருமானின் பேரருளைப் பெறுங்கள்.
+                </p>
+            </div>
+
+            <!-- மத்திய பிரம்மாண்ட கோவில் ராஜகோபுர படம் (Grand Temple Front Centerpiece) -->
+            <div class="temple-grand-image-wrapper reveal reveal-zoom">
+                <div class="temple-image-frame">
+                    <img src="images/kovil_front_hero.jpg" alt="கைதடி வடக்கு கயிற்றசிட்டி அருள்மிகு கந்தசுவாமி கோவில் ராஜகோபுரம்" class="temple-grand-img">
+                    <div class="temple-image-caption-badge">
+                        <span>ௐ முருகா ✦ ராஜகோபுர திவ்ய தரிசனம்</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- விரைவு செயல் பலகை (Quick Action Tabs) -->
+            <div class="hero-quick-tabs reveal">
+                <a href="gallery.html" class="quick-tab-btn btn-gold">
+                    <span class="tab-label">இன்றைய புகைப்படங்கள் & டவுன்லோட்</span>
+                </a>
+                <a href="events.html" class="quick-tab-btn btn-maroon">
+                    <span class="tab-label">விசேஷ நிகழ்வுகள் & அபிஷேகம்</span>
+                </a>
+                <a href="pooja.html" class="quick-tab-btn btn-maroon">
+                    <span class="tab-label">பூஜை நேர அட்டவணை</span>
+                </a>
+                <a href="history.html" class="quick-tab-btn btn-maroon">
+                    <span class="tab-label">ஸ்தல வரலாறு</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- சமீபத்திய நிகழ்வுகள் -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">தேவஸ்தான நிகழ்வுகள்</span>
+                <h2 class="section-title">சமீபத்திய தினசரி நிகழ்வுகள்</h2>
+                <p class="section-desc">கந்தசுவாமி கோவிலில் நடைபெற்ற சமீபத்திய சிறப்பு அபிஷேகங்கள், அலங்காரங்கள் மற்றும் உற்சவங்கள்</p>
+            </div>
+
+            <div class="events-grid reveal-stagger" id="homeEventsGrid">
+                <div class="event-card reveal">
+                    <div class="event-thumb-wrap">
+                        <img src="images/gopuram_front.jpg" alt="கந்தசஷ்டி பெருவிழா">
+                        <div class="event-date-tag">📅 15/11/2026</div>
+                        <div class="event-photo-count">📸 3 படங்கள்</div>
+                    </div>
+                    <div class="event-body">
+                        <span class="event-category-badge">திருவிழா</span>
+                        <h3 class="event-title">கந்தசஷ்டி பெருவிழா - சூரசம்ஹார வைபவம்</h3>
+                        <p class="event-snippet">கந்தசஷ்டி நன்னாளில் தேவஸ்தானத்தில் பக்தர்கள் சூழ நடைபெற்ற சூரசம்ஹார வைபவம் மற்றும் மாலையில் நடைபெற்ற திருக்கல்யாண உற்சவம்.</p>
+                        <div class="event-footer">
+                            <a href="gallery.html?event_id=1" class="btn-view-photos">புகைப்படங்கள் & பதிவிறக்கம் &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card reveal">
+                    <div class="event-thumb-wrap">
+                        <img src="images/gopuram_side.jpg" alt="வைகாசி விசாகம்">
+                        <div class="event-date-tag">📅 02/06/2026</div>
+                        <div class="event-photo-count">📸 2 படங்கள்</div>
+                    </div>
+                    <div class="event-body">
+                        <span class="event-category-badge">அபிஷேகம்</span>
+                        <h3 class="event-title">வைகாசி விசாக பெருவிழா 108 பாலாபிஷேகம்</h3>
+                        <p class="event-snippet">முருகப்பெருமானின் அவதாரத் திருநாளான வைகாசி விசாகத்தை முன்னிட்டு மூலவருக்கும் உற்சவருக்கும் நடைபெற்ற 108 சங்காபிஷேகமும், தங்கக் கவச அலங்காரமும்.</p>
+                        <div class="event-footer">
+                            <a href="gallery.html?event_id=2" class="btn-view-photos">புகைப்படங்கள் & பதிவிறக்கம் &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card reveal">
+                    <div class="event-thumb-wrap">
+                        <img src="images/gopuram_front.jpg" alt="தைப்பூசம்">
+                        <div class="event-date-tag">📅 01/02/2026</div>
+                        <div class="event-photo-count">📸 1 படம்</div>
+                    </div>
+                    <div class="event-body">
+                        <span class="event-category-badge">உற்சவம்</span>
+                        <h3 class="event-title">தைப்பூச நன்னாள் - மயில் வாகன பவனி</h3>
+                        <p class="event-snippet">தைப்பூச நன்னாளில் கந்தப்பெருமான் வள்ளி தெய்வானை சமேதராக மயில் வாகனத்தில் எழுந்தருளி திருவீதி உலா வந்த கண்கொள்ளாக் காட்சி.</p>
+                        <div class="event-footer">
+                            <a href="gallery.html?event_id=3" class="btn-view-photos">புகைப்படங்கள் & பதிவிறக்கம் &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal" style="text-align: center; margin-top: 40px;">
+                <a href="events.html" class="btn-primary" style="background: var(--color-maroon); color: #ffffff;">
+                    அனைத்து நிகழ்வுகளையும் காண்க &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- சிறப்பு புகைப்பட ஆல்பங்கள் பகுதி -->
+    <section class="section section-bg-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">புகைப்பட தொகுப்பு</span>
+                <h2 class="section-title">திருக்கோவில் ஆல்பங்கள்</h2>
+                <p class="section-desc">திருக்கோவில் விசேஷங்கள் மற்றும் திருவிழாக்களின் அழகிய புகைப்படத் தொகுப்புகள்.</p>
+            </div>
+
+            <div class="album-card reveal reveal-zoom">
+                <div class="album-header">
+                    <div class="album-header-info">
+                        <h3 id="homeAlbumHighlightTitle">கந்தசஷ்டி சூரசம்ஹார பெருவிழா - சிறப்பு ஆல்பம்</h3>
+                        <span id="homeAlbumHighlightMeta">📅 15/11/2026 | 🏷️ திருவிழா | 📸 HD தரம்</span>
+                    </div>
+                </div>
+                <div class="photos-masonry reveal-stagger">
+                    <div class="photo-item reveal">
+                        <img src="images/gopuram_front.jpg" alt="கோபுர தரிசனம்">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">ராஜகோபுர திவ்ய தரிசனம் (ஓம் முருகா)</div>
+                            <div class="photo-actions">
+                                <a href="gallery.html" class="btn-icon-action" title="பெரிதாகப் பார்">🔍</a>
+                                <a href="gallery.html" class="btn-icon-action" title="டவுன்லோட்">⬇️</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-item reveal">
+                        <img src="images/gopuram_side.jpg" alt="கோவில் தோற்றம்">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">தேவஸ்தான கோபுர அழகிய தோற்றம்</div>
+                            <div class="photo-actions">
+                                <a href="gallery.html" class="btn-icon-action" title="பெரிதாகப் பார்">🔍</a>
+                                <a href="gallery.html" class="btn-icon-action" title="டவுன்லோட்">⬇️</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-item reveal">
+                        <img src="images/gopuram_front.jpg" alt="வாசற்கா காட்சி">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">துவாரபாலகர் மற்றும் கோபுர முகப்பு</div>
+                            <div class="photo-actions">
+                                <a href="gallery.html" class="btn-icon-action" title="பெரிதாகப் பார்">🔍</a>
+                                <a href="gallery.html" class="btn-icon-action" title="டவுன்லோட்">⬇️</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal" style="text-align: center;">
+                <a href="gallery.html" class="btn-primary">
+                    அனைத்து புகைப்பட ஆல்பங்களுக்கும் செல்க &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ஸ்தல வரலாறு சுருக்கம் -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; align-items: center;">
+                <div class="reveal reveal-left">
+                    <span class="section-subtitle">ஸ்தல மகிமை</span>
+                    <h2 class="section-title" style="text-align: left; padding-bottom: 0;">கைதடி அருள்மிகு கந்தசுவாமி ஸ்தல வரலாறு</h2>
+                    <p style="color: #555; line-height: 1.8; margin: 20px 0;">
+                        யாழ்ப்பாணம் கைதடி வடக்கு கயிற்றசிட்டி கிராமத்தில் எழுந்தருளி அருள்பாலிக்கும் அருள்மிகு கந்தசுவாமி தேவஸ்தானம் 
+                        ஆன்மீகச் சிறப்புமிக்க பிரசித்தி பெற்ற ஆலயமாகும். வேலும் மயிலும் கொண்டு அருள்பாலிக்கும் கந்தவேள் தன்னை நாடி வரும் பக்தர்களின் 
+                        வினைகளைத் தீர்த்து சகல நலன்களையும் வாரி வழங்குகிறார்.
+                    </p>
+                    <div style="display: flex; gap: 20px; margin-bottom: 25px;">
+                        <div style="background: #fff8eb; padding: 15px 20px; border-radius: 8px; border-left: 3px solid var(--color-gold);">
+                            <strong style="color: var(--color-maroon); display: block; font-size: 1.1rem;">மூலவர்</strong>
+                            <span>அருள்மிகு கந்தசுவாமி</span>
+                        </div>
+                        <div style="background: #fff8eb; padding: 15px 20px; border-radius: 8px; border-left: 3px solid var(--color-gold);">
+                            <strong style="color: var(--color-maroon); display: block; font-size: 1.1rem;">கிராமம்</strong>
+                            <span>கைதடி வடக்கு, கயிற்றசிட்டி</span>
+                        </div>
+                    </div>
+                    <a href="history.html" class="btn-primary" style="background: var(--color-maroon); color: #ffffff;">
+                        முழுமையான வரலாற்றைப் படிக்க &rarr;
+                    </a>
+                </div>
+                <div class="reveal reveal-right">
+                    <img src="images/gopuram_front.jpg" 
+                         alt="கந்தசுவாமி கோவில் கோபுரம்" 
+                         style="border-radius: 16px; box-shadow: var(--shadow-lg); border: 3px solid var(--color-gold); width: 100%; max-height: 480px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- காணிக்கை & அன்னதானம் -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="donation-banner reveal reveal-zoom">
+                <div class="donation-text">
+                    <h2>🍲 நித்திய அன்னதானம் & திருப்பணி காணிக்கை</h2>
+                    <p>
+                        தேவஸ்தானத்தில் தினமும் நடைபெறும் நித்திய அன்னதானத்திற்கும், ஆலயத் திருப்பணிகளுக்கும் பக்தர்கள் தங்களால் இயன்ற 
+                        காணிக்கைகளை நேரடியாக தேவஸ்தான வங்கிக் கணக்கிலோ அல்லது அலுவலகத்திலோ செலுத்தி கந்தப்பெருமானின் பேரருளைப் பெறலாம்.
+                    </p>
+                    <a href="contact.html" class="btn-primary" style="background: var(--color-gold); color: #2b0202;">
+                        காணிக்கை விபரம் & வங்கி கணக்கு &rarr;
+                    </a>
+                </div>
+                <div class="bank-details-box">
+                    <h3 style="color: var(--color-gold-light); margin-top: 0; margin-bottom: 14px; font-size: 1.25rem;">வங்கி கணக்கு விபரங்கள்</h3>
+                    <div class="bank-row">
+                        <span class="bank-label">வங்கி பெயர்:</span>
+                        <span class="bank-val">இலங்கை வங்கி (Bank of Ceylon)</span>
+                    </div>
+                    <div class="bank-row">
+                        <span class="bank-label">கணக்கு பெயர்:</span>
+                        <span class="bank-val">கைதடி கந்தசுவாமி தேவஸ்தானம்</span>
+                    </div>
+                    <div class="bank-row">
+                        <span class="bank-label">கணக்கு எண்:</span>
+                        <span class="bank-val">78291045</span>
+                    </div>
+                    <div class="bank-row">
+                        <span class="bank-label">கிளை:</span>
+                        <span class="bank-val">கைதடி / சாவகச்சேரி</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- அடிக்குறிப்பு -->
+    <footer class="site-footer reveal">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                        <img src="images/gopuram_front.jpg" alt="Logo" style="width: 42px; height: 42px; border-radius: 50%; border: 2px solid var(--color-gold); object-fit: cover;">
+                        <h4 style="margin: 0; padding: 0; border: none; font-size: 1.05rem;">கைதடி அருள்மிகு கந்தசுவாமி தேவஸ்தானம்</h4>
+                    </div>
+                    <p style="color: #c9b9a9; font-size: 0.95rem; line-height: 1.7;">
+                        வெற்றிவேல் முருகனின் திருவடி நிழலில் பக்தர்கள் அனைவரும் மன அமைதியும், குடும்ப நல்வாழ்வும், சகல ஐஸ்வர்யங்களும் பெற வேண்டுகிறோம்.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>விரைவு இணைப்புகள்</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">&rsaquo; முகப்பு</a></li>
+                        <li><a href="history.html">&rsaquo; ஸ்தல வரலாறு</a></li>
+                        <li><a href="events.html">&rsaquo; தினசரி நிகழ்வுகள்</a></li>
+                        <li><a href="gallery.html">&rsaquo; புகைப்பட தொகுப்பு</a></li>
+                        <li><a href="festivals.html">&rsaquo; உற்சவங்கள்</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>பூஜை & தரிசனம்</h4>
+                    <ul class="footer-links">
+                        <li><a href="pooja.html">&rsaquo; 6 கால பூஜை நேரங்கள்</a></li>
+                        <li><a href="pooja.html">&rsaquo; அபிஷேக கட்டளைகள்</a></li>
+                        <li><a href="contact.html">&rsaquo; அன்னதான காணிக்கை</a></li>
+                        <li><a href="contact.html">&rsaquo; வழித்தட வரைபடம்</a></li>
+                        <li><a href="admin.html">&rsaquo; நிர்வாகி பலகை</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>தொடர்புக்கு</h4>
+                    <p style="color: #c9b9a9; font-size: 0.92rem; line-height: 1.7;">
+                        📍 <a href="https://maps.app.goo.gl/jAhya42bFBSFNGXw6" target="_blank" rel="noopener noreferrer" style="color: #ffd8a8; text-decoration: underline;">கைதடி வடக்கு, கயிற்றசிட்டி, யாழ்ப்பாணம் (Google Map)</a><br>
+                        📞 +94 77 123 4567, 021-2223456<br>
+                        ✉️ kaithadykandanswamy@gmail.com
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 கைதடி வடக்கு கயிற்றசிட்டி அருள்மிகு கந்தசுவாமி தேவஸ்தானம். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js?v=20260925_06"></script>
+</body>
+</html>

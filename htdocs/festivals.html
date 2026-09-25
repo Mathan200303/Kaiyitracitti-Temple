@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>வருடாந்திர உற்சவங்கள் | கைதடி வடக்கு கயிற்றசிட்டி அருள்மிகு கந்தசுவாமி தேவஸ்தானம்</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=20260925_06">
+    <style>
+        body, button, input, select, textarea {
+            font-family: 'Mukta Malar', 'Noto Sans Tamil', 'Nirmala UI', 'Latha', 'Vijaya', sans-serif !important;
+        }
+        .temple-logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--color-gold);
+            object-fit: cover;
+        }
+        .festivals-hero {
+            background: linear-gradient(rgba(35, 2, 4, 0.8), rgba(55, 3, 7, 0.85)), 
+                        url('images/gopuram_side.jpg') center top/cover no-repeat;
+            padding: 60px 0;
+            color: #ffffff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+        <!-- நல்லூர் பாணி தேவஸ்தான முதன்மை Tab Bar (Nallur Style Header) -->
+    <header class="nallur-header" id="mainHeader">
+        <div class="container nallur-header-container">
+            <!-- இடது பக்க மெனு (Left Wing) -->
+            <ul class="nallur-nav-wing nallur-nav-left">
+                <li><a href="index.html" class="nallur-nav-link">முகப்பு</a></li>
+                <li><a href="history.html" class="nallur-nav-link">ஸ்தல வரலாறு</a></li>
+                <li><a href="events.html" class="nallur-nav-link">தினசரி நிகழ்வுகள்</a></li>
+                <li><a href="pooja.html" class="nallur-nav-link">பூஜை நேரங்கள்</a></li>
+            </ul>
+
+            <!-- மத்திய தேவஸ்தான இலச்சினை (Center Emblem & Brand) -->
+            <a href="index.html" class="nallur-center-brand">
+                <div class="nallur-brand-emblem">
+                    <img src="images/kovil_front_hero.jpg" alt="கைதடி கந்தசுவாமி தேவஸ்தானம்">
+                </div>
+                <h1 class="nallur-brand-title">கைதடி கந்தசுவாமி தேவஸ்தானம்</h1>
+                <span class="nallur-brand-location">வடக்கு கயிற்றசிட்டி, யாழ்ப்பாணம்</span>
+            </a>
+
+            <!-- வலது பக்க மெனு (Right Wing) -->
+            <ul class="nallur-nav-wing nallur-nav-right">
+                <li><a href="festivals.html" class="nallur-nav-link active">உற்சவங்கள்</a></li>
+                <li><a href="gallery.html" class="nallur-nav-link">புகைப்படங்கள்</a></li>
+                <li><a href="contact.html" class="nallur-nav-link">தொடர்புகளுக்கு</a></li>
+            </ul>
+
+            <!-- மொபைல் மெனு பொத்தான் -->
+            <button class="nallur-menu-toggle" id="menuToggle" aria-label="Menu">☰ மெனு</button>
+        </div>
+
+        <!-- மொபைல் மெனு (Mobile Drawer) -->
+        <div class="nallur-mobile-drawer" id="mobileDrawer">
+            <ul class="nallur-mobile-menu">
+                <li><a href="index.html" class="nallur-mobile-link">முகப்பு</a></li>
+                <li><a href="history.html" class="nallur-mobile-link">ஸ்தல வரலாறு</a></li>
+                <li><a href="events.html" class="nallur-mobile-link">தினசரி நிகழ்வுகள்</a></li>
+                <li><a href="pooja.html" class="nallur-mobile-link">பூஜை நேரங்கள்</a></li>
+                <li><a href="festivals.html" class="nallur-mobile-link active">உற்சவங்கள்</a></li>
+                <li><a href="gallery.html" class="nallur-mobile-link">புகைப்படங்கள்</a></li>
+                <li><a href="contact.html" class="nallur-mobile-link">தொடர்புகளுக்கு</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- பதாகை -->
+    <section class="festivals-hero">
+        <div class="container">
+            <div style="font-size: 2.8rem; color: var(--color-gold);">ௐ சரவணபவ</div>
+            <h1 style="color: #ffffff; font-size: 2.3rem; margin-top: 8px;">வருடாந்திர திருவிழாக்கள் & பெருவிழாக்கள்</h1>
+            <p style="color: #ffeedd; font-size: 1.1rem; max-width: 650px; margin: 10px auto 0;">
+                ஆண்டு முழுவதும் கைதடி கந்தவேள் திருக்கோவிலில் கோலாகலமாக நடைபெறும் சூரசம்ஹாரம், தீர்த்தோற்சவம் மற்றும் தேரோட்டம்
+            </p>
+        </div>
+    </section>
+
+    <!-- திருவிழாக்கள் பட்டியல் -->
+    <main class="section">
+        <div class="container" style="max-width: 1000px;" id="festivalsContainer">
+            
+            <!-- அதிகாரப்பூர்வ பராபவ வருஷ உற்சவ அட்டவணை (Official Calendar Poster) -->
+            <div class="festival-poster-card" style="background: #ffffff; border-radius: 16px; border: 2px solid var(--color-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.08); margin-bottom: 40px; overflow: hidden;">
+                <div style="background: linear-gradient(135deg, #2b0204 0%, #440408 100%); color: #ffffff; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; border-bottom: 2px solid var(--color-gold);">
+                    <div>
+                        <span style="display: inline-block; background: rgba(229, 169, 59, 0.2); color: #ffd8a8; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; margin-bottom: 6px; border: 1px solid rgba(229, 169, 59, 0.4);">📜 அதிகாரப்பூர்வ உற்சவ அட்டவணை</span>
+                        <h2 style="font-size: 1.35rem; color: #ffffff; margin: 0; font-family: var(--font-tamil-primary);">பராபவ வருஷ உற்சவங்கள் 2026 – 2027</h2>
+                        <p style="color: #ffd8a8; font-size: 0.88rem; margin: 4px 0 0;">வருடாந்திர திருவிழாக்கள், விசேஷ அபிஷேகங்கள், நேரங்கள் & உபயகாரர்கள் முழு விபரம்</p>
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <a href="images/festivals_calendar_2026_2027.jpg" target="_blank" class="btn-primary" style="padding: 8px 16px; font-size: 0.88rem; text-decoration: none; border-radius: 30px; display: inline-flex; align-items: center; gap: 6px;">
+                            <span>🔍 பெரிதாக்கிப் பார்க்க</span>
+                        </a>
+                        <a href="images/festivals_calendar_2026_2027.jpg" download="Kaithady_Kandaswamy_Festivals_2026_2027.jpg" class="btn-secondary" style="padding: 8px 16px; font-size: 0.88rem; text-decoration: none; border-radius: 30px; display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.4); color: #ffffff;">
+                            <span>📥 பதிவிறக்கம் (Download)</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div style="padding: 20px; text-align: center; background: #fffcf6;">
+                    <a href="images/festivals_calendar_2026_2027.jpg" target="_blank" title="கிளிக் செய்து முழு அளவில் பார்க்கவும்" style="display: inline-block; cursor: zoom-in; max-width: 100%;">
+                        <img src="images/festivals_calendar_2026_2027.jpg" alt="கைதடி வடக்கு கயிற்றசிட்டி அருள்மிகு கந்தசுவாமி தேவஸ்தானம் பராபவ வருஷ உற்சவங்கள் 2026 - 2027" style="max-width: 100%; height: auto; max-height: 850px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); border: 1px solid #ebdcd0; display: block; margin: 0 auto; transition: transform 0.25s ease;">
+                    </a>
+                    <div style="margin-top: 14px; color: #854d0e; font-size: 0.9rem; font-weight: 600;">
+                        🔍 படத்தின் மீது கிளிக் செய்து முழு அளவிலான தெளிவான வடிவத்தைப் பார்வையிடலாம் / டவுன்லோட் செய்யலாம்.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="festival-card">
+                <div class="festival-img-wrap">
+                    <img src="images/gopuram_front.jpg" alt="கந்தசஷ்டி விழா">
+                </div>
+                <div class="festival-info">
+                    <div class="festival-month">ஐப்பசி மாதம் (அக்டோபர் - நவம்பர்)</div>
+                    <h3 class="festival-title">கந்தசஷ்டி பெருவிழா & சூரசம்ஹார வைபவம்</h3>
+                    <p class="festival-desc">
+                        6 நாட்கள் விரதமிருந்து நடைபெறும் அதிவிமரிசையான கந்தசஷ்டி பெருவிழா. ஆறாம் நாள் மாலையில் 
+                        சூரபத்மனை முருகப்பெருமான் வதம் செய்யும் சூரசம்ஹார திருவிளையாடலும், அதனைத் தொடர்ந்து வள்ளி தெய்வானை 
+                        சமேத கந்தசுவாமி திருக்கல்யாண உற்சவமும் பக்தர்களின் பக்திப் பரவசத்துடன் நடைபெறும்.
+                    </p>
+                </div>
+            </div>
+
+            <div class="festival-card">
+                <div class="festival-img-wrap">
+                    <img src="images/gopuram_side.jpg" alt="தைப்பூசம்">
+                </div>
+                <div class="festival-info">
+                    <div class="festival-month">தை மாதம் (ஜனவரி - பிப்ரவரி)</div>
+                    <h3 class="festival-title">தைப்பூச நன்னாள் பெருவிழா & பால்காவடி</h3>
+                    <p class="festival-desc">
+                        அன்னை பராசக்தியிடம் வேல் வாங்கிய தைப்பூச நன்னாளில், கந்தப்பெருமானுக்கு விசேஷ 108 திரவிய அபிஷேகங்கள், 
+                        பக்தர்களின் காவடி ஆட்டங்கள், பால்குட பவனி மற்றும் மயில் வாகனத்தில் சுவாமி திருவீதி உலா மிகச் சிறப்பாக நடைபெறும்.
+                    </p>
+                </div>
+            </div>
+
+            <div class="festival-card">
+                <div class="festival-img-wrap">
+                    <img src="images/gopuram_front.jpg" alt="வைகாசி விசாகம்">
+                </div>
+                <div class="festival-info">
+                    <div class="festival-month">வைகாசி மாதம் (மே - ஜூன்)</div>
+                    <h3 class="festival-title">வைகாசி விசாக அவதாரப் பெருவிழா</h3>
+                    <p class="festival-desc">
+                        சிவபெருமானின் நெற்றிக் கண்ணிலிருந்து அவதரித்த ஆறுமுகப் பெருமானின் பிறந்த நாளான வைகாசி விசாக நன்னாளில் 
+                        மூலவருக்கு 108 சங்காபிஷேகமும், சகஸ்ரநாம அர்ச்சனையும், அன்னதானமும் சிறப்பாக நடைபெறும்.
+                    </p>
+                </div>
+            </div>
+
+            <div class="festival-card">
+                <div class="festival-img-wrap">
+                    <img src="images/gopuram_side.jpg" alt="பங்குனி உத்திரம்">
+                </div>
+                <div class="festival-info">
+                    <div class="festival-month">பங்குனி மாதம் (மார்ச் - ஏப்ரல்)</div>
+                    <h3 class="festival-title">பங்குனி உத்திர திருக்கல்யாணம் & பூப்பல்லக்கு</h3>
+                    <p class="festival-desc">
+                        வள்ளி நாயகியை கந்தவேள் கரம் பிடித்த புண்ணிய நன்னாளில் நடைபெறும் திவ்ய திருக்கல்யாண மகோற்சவம் 
+                        மற்றும் நள்ளிரவில் வண்ண மலர்களால் அலங்கரிக்கப்பட்ட பூப்பல்லக்கில் சுவாமி உலா வரும் காட்சி கண்கொள்ளாக் காட்சியாகும்.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- அடிக்குறிப்பு -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 கைதடி வடக்கு கயிற்றசிட்டி அருள்மிகு கந்தசுவாமி தேவஸ்தானம். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js?v=20260925_06"></script>
+</body>
+</html>

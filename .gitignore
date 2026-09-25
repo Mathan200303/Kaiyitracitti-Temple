@@ -1,0 +1,72 @@
+# ====================================================================
+# Git Ignore for கைதடி அருள்மிகு கந்தசுவாமி கோவில் இணையதளம்
+# ====================================================================
+
+# Environment Variables & Local Secret Configurations
+.env
+.env.local
+.env.*.local
+*.env
+config.local.php
+
+# Operating System Files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Editor and IDE Directories
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+*~
+
+# Logs and Debugging
+*.log
+error_log
+php_errors.log
+logs/
+*.pid
+*.seed
+
+# Temporary and Cache Directories
+tmp/
+temp/
+cache/
+*.cache
+*.tmp
+
+# User Uploaded Content (Preserve directory with .gitkeep)
+htdocs/uploads/*
+!htdocs/uploads/.gitkeep
+
+# Package Managers (if added in the future)
+/vendor/
+/node_modules/
+composer.phar
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Database Backups & Dumps (preserves database/temple.sql)
+*.sql.gz
+*.sql.zip
+*.dump
+*.bak
+*.backup
