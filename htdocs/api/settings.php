@@ -6,7 +6,7 @@
 require_once __DIR__ . '/db.php';
 
 $pdo = getDB();
-$method = $_SERVER['REQUEST_METHOD'];
+$method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
