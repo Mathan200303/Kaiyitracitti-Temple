@@ -79,8 +79,8 @@ function renderEventsGrid(events) {
         card.innerHTML = `
             <div class="event-thumb-wrap">
                 <img src="${cover}" alt="${ev.title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80'">
-                <div class="event-date-tag">📅 ${formatTamilDate(ev.event_date)}</div>
-                <div class="event-photo-count">📸 ${photoCount} படங்கள்</div>
+                <div class="event-date-tag">${formatTamilDate(ev.event_date)}</div>
+                <div class="event-photo-count">${photoCount} படங்கள்</div>
             </div>
             <div class="event-body">
                 <span class="event-category-badge">${ev.category || 'விசேஷம்'}</span>

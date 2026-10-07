@@ -710,7 +710,7 @@
             </div>
             <div class="nav-item" onclick="switchTab('tab-history')">
                 <span class="icon">📜</span>
-                <span>Temple History (ஸ்தல வரலாறு)</span>
+                <span>Temple History (ஆலய வரலாறு)</span>
             </div>
             <div class="nav-item" onclick="switchTab('tab-announcements')">
                 <span class="icon">📢</span>
@@ -888,12 +888,12 @@
             </form>
         </div>
 
-        <!-- TAB: TEMPLE HISTORY MANAGEMENT (ஸ்தல வரலாறு) -->
+        <!-- TAB: TEMPLE HISTORY MANAGEMENT (ஆலய வரலாறு) -->
         <div id="tab-history" class="tab-panel">
-            <h2 class="tab-title">📜 Manage Temple History (ஸ்தல வரலாறு திருத்துதல்)</h2>
+            <h2 class="tab-title">📜 Manage Temple History (ஆலய வரலாறு திருத்துதல்)</h2>
 
             <div class="tip-box">
-                💡 <strong>ஸ்தல வரலாறு மேலாண்மை:</strong> திருக்கோவிலின் தோற்றம், ராஜகோபுர சிறப்பு, திருவிழாக்கள் மற்றும் அன்னதானம் பற்றிய விபரங்களை இங்கு எளிதாக திருத்தி சேமிக்கலாம். மாற்றங்கள் உடனே <a href="history.html" target="_blank" style="font-weight:700; color:#1e40af;">history.html</a> பக்கத்தில் காண்பிக்கப்படும்!
+                💡 <strong>ஆலய வரலாறு மேலாண்மை:</strong> திருக்கோவிலின் தோற்றம், ராஜகோபுர சிறப்பு, திருவிழாக்கள் மற்றும் அன்னதானம் பற்றிய விபரங்களை இங்கு எளிதாக திருத்தி சேமிக்கலாம். மாற்றங்கள் உடனே <a href="history.html" target="_blank" style="font-weight:700; color:#1e40af;">history.html</a> பக்கத்தில் காண்பிக்கப்படும்!
             </div>
 
             <form onsubmit="handleHistorySave(event)">
@@ -1831,7 +1831,7 @@
         localStorage.setItem('temple_settings', JSON.stringify(info));
     }
 
-    // TEMPLE HISTORY (ஸ்தல வரலாறு) MANAGEMENT
+    // TEMPLE HISTORY (ஆலய வரலாறு) MANAGEMENT
     const defaultHistoryData = {
         heroTitle: 'கைதடி அருள்மிகு கயிற்றசிட்டி கந்தசுவாமி தேவஸ்தான ஆலய வரலாறு',
         heroSubtitle: 'இயற்கை வளம் நிரம்பிய ஈழத்து தென்மராட்சி கைதடி மண்ணில் 1775 முதல் அருள்பாலிக்கும் வேலவர் திருக்கோவில் முழு வரலாறு',
@@ -1895,7 +1895,7 @@
                 body: JSON.stringify(data)
             });
             if (json.status) {
-                alert('✅ ' + (json.message || 'ஸ்தல வரலாறு வெற்றிகரமாக சேமிக்கப்பட்டது!'));
+                alert('✅ ' + (json.message || 'ஆலய வரலாறு வெற்றிகரமாக சேமிக்கப்பட்டது!'));
             }
         } catch (err) {
             console.error('History save error:', err);

@@ -101,7 +101,7 @@ async function loadAnnouncements() {
             if (data.status && Array.isArray(data.data) && data.data.length > 0) {
                 localStorage.setItem('temple_announcements', JSON.stringify(data.data));
                 const notices = data.data.map(item => item.title + (item.content ? ': ' + item.content : ''));
-                tickerElem.innerText = notices.join('   ✦   ');
+                tickerElem.innerText = notices.join('   ·   ');
                 return;
             }
         }
@@ -113,11 +113,11 @@ async function loadAnnouncements() {
     const local = JSON.parse(localStorage.getItem('temple_announcements') || '[]');
     if (Array.isArray(local) && local.length > 0) {
         const notices = local.map(item => item.title + (item.content ? ': ' + item.content : ''));
-        tickerElem.innerText = notices.join('   ✦   ');
+        tickerElem.innerText = notices.join('   ·   ');
         return;
     }
 
-    tickerElem.innerText = 'தினமும் காலை 5:30 மணி முதல் இரவு 9:00 மணி வரை திருக்கோவில் நடை திறந்திருக்கும். ✦ தினசரி மகா அன்னதானம் நடைபெறுகிறது.';
+    tickerElem.innerText = 'தினமும் காலை 5:30 மணி முதல் இரவு 9:00 மணி வரை திருக்கோவில் நடை திறந்திருக்கும். · தினசரி மகா அன்னதானம் நடைபெறுகிறது.';
 }
 
 // 4. கோவில் அமைப்புகள் & தகவல் ஒத்திசைவு (Sync Temple Settings - Network Synced)
@@ -183,7 +183,7 @@ async function syncTempleSettings() {
         document.querySelectorAll('.top-contact-info a, a[href^="tel:"]').forEach(el => {
             const firstPhone = info.phone.split(',')[0].trim();
             el.href = `tel:${firstPhone.replace(/[^0-9+]/g, '')}`;
-            el.innerText = `📞 ${firstPhone}`;
+            el.innerText = firstPhone;
         });
         const contactPhoneSpan = document.getElementById('contactPhoneDisplay');
         if (contactPhoneSpan) contactPhoneSpan.innerText = info.phone;
@@ -293,8 +293,8 @@ async function renderHomeEvents() {
         card.innerHTML = `
             <div class="event-thumb-wrap">
                 <img src="${cover}" alt="${ev.title}" onerror="this.src='images/gopuram_front.jpg'">
-                <div class="event-date-tag">📅 ${formatTamilDisplayDate(ev.event_date)}</div>
-                <div class="event-photo-count">📸 ${pCount} படங்கள்</div>
+                <div class="event-date-tag">${formatTamilDisplayDate(ev.event_date)}</div>
+                <div class="event-photo-count">${pCount} படங்கள்</div>
             </div>
             <div class="event-body">
                 <span class="event-category-badge">${ev.category || 'விசேஷம்'}</span>
@@ -316,7 +316,7 @@ async function renderHomeEvents() {
     if (albumTitle && displayList[0]) {
         albumTitle.innerText = `${displayList[0].title} - சிறப்பு ஆல்பம்`;
         if (albumMeta) {
-            albumMeta.innerText = `📅 ${formatTamilDisplayDate(displayList[0].event_date)} | 🏷️ ${displayList[0].category || 'திருவிழா'} | 📸 HD தரம்`;
+            albumMeta.innerText = `${formatTamilDisplayDate(displayList[0].event_date)} | ${displayList[0].category || 'திருவிழா'} | HD தரம்`;
         }
     }
 }
@@ -422,8 +422,42 @@ function showToast(message, type = 'info') {
     }, 3500);
 }
 
-// 9. பக்க ஸ்க்ரோல் அனிமேஷன் (Scroll Reveal Animation via IntersectionObserver)
+// 9. பக்க ஸ்க்ரோல் அனிமேஷன் (Universal Scroll Reveal Animation via IntersectionObserver)
 function initScrollReveal() {
+    // அனைத்து பக்கங்களிலும் உள்ள முக்கிய பகுதிகளை தானாகவே ஸ்க்ரோல் அனிமேஷனில் இணைத்தல்
+    const autoSelectors = [
+        '.section-header',
+        '.feature-box',
+        '.history-article > h2',
+        '.history-article > p',
+        '.pooja-card',
+        '.month-event-group',
+        '.festival-card',
+        '.festival-poster-card',
+        '.events-grid > *',
+        '.event-card',
+        '.album-card',
+        '.photo-item',
+        '.contact-box',
+        '.bank-details-box',
+        '.donation-banner',
+        '.search-bar-wrap',
+        '.footer-col'
+    ];
+
+    autoSelectors.forEach(selector => {
+        document.querySelectorAll(selector).forEach(el => {
+            if (!el.classList.contains('reveal') && 
+                !el.closest('header') && 
+                !el.closest('.site-header') && 
+                !el.closest('.mobile-drawer') && 
+                !el.closest('.modal') && 
+                !el.closest('#lightboxModal')) {
+                el.classList.add('reveal');
+            }
+        });
+    });
+
     const reveals = document.querySelectorAll('.reveal');
     if (!reveals || reveals.length === 0) return;
 
@@ -442,9 +476,9 @@ function initScrollReveal() {
         });
 
         reveals.forEach(el => {
-            // If already in viewport on initial load, activate immediately
             const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
+            // பக்கத்தின் ஆரம்ப பார்வையில் உள்ளவை உடனே தெரியும்படி செய்தல்
+            if (rect.top < window.innerHeight * 0.88 && rect.bottom > 0) {
                 el.classList.add('active');
             } else {
                 observer.observe(el);
@@ -454,4 +488,9 @@ function initScrollReveal() {
         reveals.forEach(el => el.classList.add('active'));
     }
 }
+
+// பக்க முழு ஏற்றுதல் முடிந்ததும் மீண்டும் சரிபார்த்தல்
+window.addEventListener('load', () => {
+    setTimeout(initScrollReveal, 100);
+});
 

@@ -86,7 +86,7 @@ function renderAlbums(albums) {
     if (!albums || albums.length === 0) {
         container.innerHTML = `
             <div style="text-align: center; padding: 60px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #ede4d3;">
-                <div style="font-size: 3rem; color: #d4af37; margin-bottom: 12px;">📸</div>
+                <div style="font-size: 2.5rem; color: #d4af37; margin-bottom: 12px;"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg></div>
                 <h3 style="color: #680509; margin-bottom: 8px;">தற்போது புகைப்படங்கள் எதுவும் இல்லை</h3>
                 <p style="color: #6b7280;">விரைவில் புதிய நிகழ்வுகளின் புகைப்படங்கள் பதிவேற்றப்படும்.</p>
             </div>
@@ -108,11 +108,11 @@ function renderAlbums(albums) {
             <div class="album-header">
                 <div class="album-header-info">
                     <h3>${album.event_title || 'திருக்கோவில் நிகழ்வு'}</h3>
-                    <span>📅 ${formatTamilDate(album.event_date)} | 🏷️ ${album.category || 'விசேஷம்'} | 📸 ${photos.length} புகைப்படங்கள்</span>
+                    <span>${formatTamilDate(album.event_date)} | ${album.category || 'விசேஷம்'} | ${photos.length} புகைப்படங்கள்</span>
                 </div>
                 <div>
                     <button class="btn-download-album" onclick="downloadAlbumZip(${albumIndex})" title="முழு ஆல்பத்தையும் ஒரே ZIP கோப்பாக பதிவிறக்குக">
-                        <span>📦</span> முழு ஆல்பத்தையும் ZIP ஆக டவுன்லோட் செய்
+                        முழு ஆல்பத்தையும் ZIP ஆக டவுன்லோட் செய்
                     </button>
                 </div>
             </div>
@@ -128,10 +128,10 @@ function renderAlbums(albums) {
                             <div class="photo-caption">${photo.caption || album.event_title}</div>
                             <div class="photo-actions">
                                 <button class="btn-icon-action" onclick="openLightbox(${albumIndex}, ${pIdx})" title="பெரிதாகப் பார்">
-                                    🔍
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                                 </button>
                                 <button class="btn-icon-action" onclick="downloadSinglePhoto('${photo.image_url}', '${photo.caption || 'temple_photo'}', ${photo.id || 0})" title="HD பதிவிறக்கம்">
-                                    ⬇️
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                                 </button>
                             </div>
                         </div>
@@ -172,7 +172,7 @@ async function downloadSinglePhoto(imageUrl, caption, photoId = 0) {
         window.URL.revokeObjectURL(blobUrl);
         document.body.removeChild(a);
 
-        showToast('✅ புகைப்படம் வெற்றிகரமாக பதிவிறக்கப்பட்டது!');
+        showToast('புகைப்படம் வெற்றிகரமாக பதிவிறக்கப்பட்டது!');
     } catch (err) {
         // Fallback for strict CORS restrictions
         const a = document.createElement('a');
@@ -195,7 +195,7 @@ async function downloadAlbumZip(albumIndex) {
     }
 
     const zip = new JSZip();
-    showToast(`📦 "${album.event_title}" ZIP கோப்பு தயாராகிறது... தயவுசெய்து காத்திருக்கவும்...`);
+    showToast(`"${album.event_title}" ZIP கோப்பு தயாராகிறது... தயவுசெய்து காத்திருக்கவும்...`);
 
     const photos = album.photos;
     let successCount = 0;
@@ -229,7 +229,7 @@ async function downloadAlbumZip(albumIndex) {
         a.click();
         document.body.removeChild(a);
 
-        showToast(`🎉 "${album.event_title}" ஆல்பம் ZIP கோப்பாக பதிவிறக்கப்பட்டது!`);
+        showToast(`"${album.event_title}" ஆல்பம் ZIP கோப்பாக பதிவிறக்கப்பட்டது!`);
     });
 }
 

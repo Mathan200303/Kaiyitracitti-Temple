@@ -598,7 +598,7 @@ if (empty($recentEvents)) {
             </div>
             <div class="nav-item" onclick="switchTab('tab-history')">
                 <span class="icon">📜</span>
-                <span>Temple History (ஸ்தல வரலாறு)</span>
+                <span>Temple History (ஆலய வரலாறு)</span>
             </div>
             <div class="nav-item" onclick="switchTab('tab-announcements')">
                 <span class="icon">📢</span>
@@ -776,12 +776,12 @@ if (empty($recentEvents)) {
             </form>
         </div>
 
-        <!-- TAB: TEMPLE HISTORY MANAGEMENT (ஸ்தல வரலாறு) -->
+        <!-- TAB: TEMPLE HISTORY MANAGEMENT (ஆலய வரலாறு) -->
         <div id="tab-history" class="tab-panel">
-            <h2 class="tab-title">📜 Manage Temple History (ஸ்தல வரலாறு திருத்துதல்)</h2>
+            <h2 class="tab-title">📜 Manage Temple History (ஆலய வரலாறு திருத்துதல்)</h2>
 
             <div class="tip-box">
-                💡 <strong>ஸ்தல வரலாறு மேலாண்மை:</strong> திருக்கோவிலின் தோற்றம், ராஜகோபுர சிறப்பு, திருவிழாக்கள் மற்றும் அன்னதானம் பற்றிய விபரங்களை இங்கு எளிதாக திருத்தி சேமிக்கலாம். மாற்றங்கள் உடனே <a href="../history.html" target="_blank" style="font-weight:700; color:#1e40af;">history.html</a> பக்கத்தில் காண்பிக்கப்படும்!
+                💡 <strong>ஆலய வரலாறு மேலாண்மை:</strong> திருக்கோவிலின் தோற்றம், ராஜகோபுர சிறப்பு, திருவிழாக்கள் மற்றும் அன்னதானம் பற்றிய விபரங்களை இங்கு எளிதாக திருத்தி சேமிக்கலாம். மாற்றங்கள் உடனே <a href="../history.html" target="_blank" style="font-weight:700; color:#1e40af;">history.html</a> பக்கத்தில் காண்பிக்கப்படும்!
             </div>
 
             <form onsubmit="handleHistorySave(event)">
